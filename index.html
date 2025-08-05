@@ -20,6 +20,7 @@
       color: #fff;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+
     .floating-message {
       position: fixed;
       top: 300px;
@@ -33,10 +34,10 @@
       font-size: 1.2em;
       font-weight: bold;
       z-index: 1000;
-      animation: float 3s ease-in-out infinite;
       max-width: 90%;
       text-align: center;
     }
+
     @keyframes float {
       0%, 100% {
         transform: translateX(-50%) translateY(0);
@@ -45,13 +46,18 @@
         transform: translateX(-50%) translateY(-10px);
       }
     }
+
     .countdown {
       margin-top: 10px;
       font-size: 1em;
       color: #fff;
     }
-    /* Responsive para pantallas pequeñas */
-    @media (max-width: 600px) {
+
+    /* 🔁 Ajuste responsive para móviles */
+    @media (max-width: 768px) {
+      body {
+        background-size: cover;
+      }
       .floating-message {
         top: 150px;
         padding: 10px 20px;
